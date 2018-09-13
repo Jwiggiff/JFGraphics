@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Admin Panel | JF Graphics</title>
+  <meta name="description" content="Admin Panel | JF Graphics">
+  <meta name="author" content="Josh Friedman">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../css/custom.css">
+  <link rel="stylesheet" href="../../css/cover.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="../../images/favicon.png">
+
+  <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <script>
+    jQuery('body').css('display', 'none');
+    jQuery(document).ready(function() {
+      jQuery('body').fadeIn();
+      jQuery('a').on('click', function(event) {
+        var thetarget = this.getAttribute('target')
+        if (thetarget != "_blank") {
+          var thehref = this.getAttribute('href')
+          event.preventDefault();
+          jQuery('body').fadeOut(function() {
+            window.location = thehref
+          });
+        }
+      });
+    });
+    setTimeout(function() {
+      jQuery('body').fadeIn();
+    }, 1000)
+  </script>
+
+
+  <div class="jumbotron jumbotron-fluid bg-main">
+    <div class="container-fluid">
+      <h1 class="display-3">Private Gallery</h1>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col pb-3">
+        <div class="card bg-dark">
+          <button class="btn btn-dark" data-toggle="modal" data-target="#lowPolyModal">
+            <img src="../../images/Artwork/private/low_poly_face.png" class="img-fluid rounded px-3 pt-3">
+            <h3 style="font-size: 2.1875vw" class="font-weight-bold px-3 pt-1">Low Poly Face</h3>
+          </button>
+        </div>
+      </div>
+      <div class="col pb-3">
+        <div class="card bg-dark">
+          <button class="btn btn-dark" data-toggle="modal" data-target="#noFaceModal">
+            <img src="../../images/Artwork/private/no_face.png" class="img-fluid rounded px-3 pt-3">
+            <h3 style="font-size: 2.1875vw" class="font-weight-bold px-3 pt-1">Josh - Deconstructed</h3>
+          </button>
+        </div>
+      </div>
+      <div class="col pb-3">
+        <div class="card bg-dark">
+          <button class="btn btn-dark" data-toggle="modal" data-target="#minecraftModal">
+            <img src="../../images/Artwork/private/minecraft_face.jpg" class="img-fluid rounded px-3 pt-3">
+            <h3 style="font-size: 2.1875vw" class="font-weight-bold px-3 pt-1">Minecraft Face</h3>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="lowPolyModal" index="-1" role="dialog" aria-labelledby="lowPolyModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <img src="../../images/Artwork/private/low_poly_face.png" class="rounded img-fluid">
+    </div>
+  </div>
+  <div class="modal fade" id="noFaceModal" index="-1" role="dialog" aria-labelledby="noFaceModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <img src="../../images/Artwork/private/no_face.png" class="rounded img-fluid">
+    </div>
+  </div>
+  <div class="modal fade" id="minecraftModal" index="-1" role="dialog" aria-labelledby="minecraftModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <img src="../../images/Artwork/private/minecraft_face.jpg" class="rounded img-fluid">
+    </div>
+  </div>
+</body>

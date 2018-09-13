@@ -1,0 +1,77 @@
+body {
+  font-family: "Raleway";
+}
+
+.navbar-dark {
+  box-shadow: 0px 3px 5px #171a1c;
+}
+
+.bg-main {
+  background-color: #5f666d;
+}
+
+/*
+.grid-sizer,
+.grid-item { width: 20%; }
+.grid-item--width2 { width: 40%; }
+*/
+
+.masonry {
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: -8px; /* Adjustment for the gutter */
+}
+
+.masonry-brick {
+  flex: auto;
+  height: 250px;
+  min-width: 150px;
+  margin: 0 8px 8px 0; /* Some gutter */
+}
+
+/*
+.masonry-brick {
+  &:nth-child(4n+1){
+     width: 250px;
+     background-image: url("../images/Artwork/Beyond_your_grasp.svg");
+  }
+  &:nth-child(4n+2){
+     width: 325px;
+     background-image: url("../images/Artwork/Moon_and_back.svg");
+  }
+  &:nth-child(4n+3){
+     width: 180px;
+  }
+  &:nth-child(4n+4){
+     width: 380px;
+  }
+}
+*/
+
+.masonry-layout {
+  column-count: 3;
+  column-gap: 0;
+}
+.masonry-layout-panel {
+  break-inside: avoid;
+  padding: 5px;
+}
+.masonry-layout-panel__content {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.pic1 {
+  background-image: url("../images/Artwork/Beyond_your_grasp.svg");
+  width: auto;
+}
+
+.pic2 {
+  background-image: url("../images/Artwork/Moon_and_back.svg");
+  width: auto;
+}
+
+.pic3 {
+  background-image: url("../images/Artwork/low poly lion.png");
+  width: auto;
+}
